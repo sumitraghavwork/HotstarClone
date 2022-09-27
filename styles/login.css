@@ -1,0 +1,48 @@
+body > img {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 100px;
+    left: 0px;
+  }
+#login-form-div{
+    width: 25%;
+    margin: 60px auto;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #111929;
+}
+#login-form-div>h2{
+    text-align: center;
+}
+#login-form-div>form>input,label{
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+#login-form-div>form>input{
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: transparent;
+}
+#login-form-div>form>input[type='submit']{
+    border: none;
+    font-size: 18px;
+    color: #4475d7;
+    background-color: #081c45;
+    cursor: pointer;
+}
+#login-form-div>form>input[type='submit']:hover{
+    background-color: #172c57;
+    transform: scale(1.01);
+}
+#login-form-div>form>p{
+    text-align: center;
+}
+#login-form-div>form>p>a{
+    text-decoration: none;
+    color: #4475d7;
+}

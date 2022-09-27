@@ -1,0 +1,43 @@
+#movie{
+    width: 95%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 40px;
+}
+#movie>div{
+    padding: 20px;
+    border: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    gap: 10px;    
+    border-radius: 10px;
+}
+#movie>div>div>img{
+    display: block;
+    width: 100%;
+}
+#movie>div>div:nth-child(2){
+    padding: 10px;;
+}
+#movie>div>div:nth-child(2) *{
+    margin-top: 10px;
+}
+.parent {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .image1 {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .image2 {
+    position: absolute;
+    bottom: -50px;
+    left: 0px;
+    background-color: transparent;
+  }

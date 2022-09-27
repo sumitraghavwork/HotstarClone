@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="./styles/login.css">
+        <link rel="stylesheet" href="./styles/navbar.css">
+    </head>
+    <body>
+      <img id="base_img" src="https://img1.hotstarext.com/image/upload/f_auto,t_web_hm_m1/sources/r1/cms/prod/7034/677034-m" alt="">
+      <div id="navbar">
+        <div>
+          <a href="index.html">
+            <img
+              src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"
+              alt="logo"
+            />
+          </a>
+        </div>
+        <div>
+          <div><a href="./trending.html">TRENDING</a></div>
+          <div>MOVIES</div>
+          <div>SPORTS</div>
+          <div>KIDS</div>
+        </div>
+        <div>
+            <input
+              oninput="debounce(main,1000)"
+              type="text"
+              name="search"
+              id="search-bar"
+              placeholder="Search for movies, tv shows & more"
+            />        
+            <div id="query">
+            <!-- add search query here  -->
+            </div>               
+        </div>
+        <div>
+          <div><a href="index.html">Home</a></div>
+          <div><a href="login.html">Login</a></div>
+          <div><a href="signup.html">SignUp</a></div>
+        </div>
+      </div>
+        <div id="search-gifs">
+            <!-- add gif here when searching  -->
+          </div>
+        <div id="login-form-div">
+            <h2>Login</h2>
+            <form action="" id="user_data">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" placeholder="Enter Email" />
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password" placeholder="Enter Passsword"/>
+              <input type="submit" name="signup" id="signup" value="Login" />
+              <p>Don't have an account? <a href="signup.html">SignUp</a></p>
+            </form>
+
+        </div>
+    </body>
+
+</html>
+<script src="./scripts/login.js
+"></script>
+<script src="./scripts/search.js"></script>

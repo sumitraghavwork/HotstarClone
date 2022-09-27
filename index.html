@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/trending.css">
+  </head>
+
+  <body>
+    <div id="navbar">
+      <div>
+        <a href="index.html">
+          <img
+            src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"
+            alt="logo"
+          />
+        </a>
+      </div>
+      <div>
+        <div><a href="./trending.html">TRENDING</a></div>
+        <div>MOVIES</div>
+        <div>SPORTS</div>
+        <div>KIDS</div>
+      </div>
+      <div>
+          <input
+            oninput="debounce(main,1000)"
+            type="text"
+            name="search"
+            id="search-bar"
+            placeholder="Search for movies, tv shows & more"
+          />        
+          <div id="query">
+          <!-- add search query here  -->
+          </div>               
+      </div>
+      <div>
+        <div><a href="index.html">Home</a></div>
+        <div><a href="login.html">Login</a></div>
+        <div><a href="signup.html">SignUp</a></div>
+      </div>
+    </div>
+    <div id="search-gifs">
+      <!-- add gif here when searching  -->
+    </div>
+    <div id="slideshow">
+      <!--Show Slideshow here-->
+    </div>
+    <div id="main-container">
+      <h2>Trending</h2>
+      <div class="movies" id="trend1">
+          <!-- add movie scroll here      -->
+      </div>
+      <h2>What's Popular</h2>        
+      <div class="movies" id="trend2">
+          <!-- add movie scroll here      -->
+      </div>
+      <h2>Free To Watch</h2>
+      <div class="movies" id="trend3">
+          <!-- add movie scroll here      -->
+      </div>
+      <h2>What's Popular</h2>
+      <div class="movies" id="trend4">
+          <!-- add movie scroll here      -->
+      </div>
+      <h2>Free To Watch</h2>
+      <div class="movies" id="trend5">
+          <!-- add movie scroll here      -->
+      </div>
+      <h2>What's Popular</h2>
+      <div class="movies" id="trend6">
+          <!-- add movie scroll here      -->
+      </div>
+      <h2>Free To Watch</h2>
+      <div class="movies" id="trend7">
+          <!-- add movie scroll here      -->
+      </div>
+      <h2>What's Popular</h2>
+      <div class="movies" id="trend8">
+          <!-- add movie scroll here      -->
+      </div>
+  </div>  
+    <div id="sort-buttons">
+      <!--Add sorting here-->
+      <div><button id="sort-lh">Sort by Year Old to New</button></div>
+      <div><input onchange="filterbyyear()" type="text" name="" id="year" placeholder="Enter Latest > Year"></div>
+      <div><button id="sort-hl">Sort by Year New to Old</button></div>
+    </div>
+    <div id="movies">
+      <!--Show list of movies here-->
+    </div>
+  </body>
+</html>
+<script src="./scripts/index.js"></script><script src="./scripts/search.js"></script>
+<script src="./scripts/trending.js"></script>

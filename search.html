@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/search.css">
+</head>
+<body>
+  <div id="navbar">
+    <div>
+      <a href="index.html">
+        <img
+          src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"
+          alt="logo"
+        />
+      </a>
+    </div>
+    <div>
+      <div><a href="./trending.html">TRENDING</a></div>
+      <div>MOVIES</div>
+      <div>SPORTS</div>
+      <div>KIDS</div>
+    </div>
+    <div>
+        <input
+          oninput="debounce(main,1000)"
+          type="text"
+          name="search"
+          id="search-bar"
+          placeholder="Search for movies, tv shows & more"
+        />        
+        <div id="query">
+        <!-- add search query here  -->
+        </div>               
+    </div>
+    <div>
+      <div><a href="index.html">Home</a></div>
+      <div><a href="login.html">Login</a></div>
+      <div><a href="signup.html">SignUp</a></div>
+    </div>
+  </div>
+    <div id="search-gifs">
+      <!-- add gif here when searching  -->
+    </div>
+    <div id="movie">
+        <!-- add movie data here  -->
+    </div>
+</body>
+</html>
+<script src="./scripts/search.js"></script>
+<script>
+    var movieData=JSON.parse(localStorage.getItem('searchedMovie')) || []
+    window.addEventListener('load',function(){
+        appendMovie(movieData)
+    })
+    function appendMovie(arr){
+        document.getElementById('movie').innerHTML=null
+        // console.log(arr)
+        arr.forEach(function(ele){
+            const movie = document.createElement('div');
+            const card = document.createElement('div');
+            card.setAttribute('class','parent')
+            const poster = document.createElement('img');
+            poster.src = ele.Poster
+            poster.setAttribute('class','.image1')
+            const des = document.createElement('div');
+            const title = document.createElement('h2');
+            title.innerText = ele.Title
+            const released = document.createElement('span');
+            released.innerText=ele.Year
+            const rating = document.createElement('p');
+            rating.innerText = `IMDB Rating: ${ele.imdbRating}`
+            rating.style.color = 'yellow'
+            const plot = document.createElement('p');
+            plot.innerText = ele.Plot
+            const actors = document.createElement('p');
+            actors.innerText = `Actors: ${ele.Actors}`
+            const awards = document.createElement('p');
+            awards.innerText = `Awards: ${ele.Awards}`
+            const genre = document.createElement('p');
+            genre.innerText = `Genre: ${ele.Genre}`
+            des.append(title,released,rating,genre,plot,actors,awards)
+            card.append(poster)
+            if(ele.imdbRating>8.5){
+              var recommend = document.createElement('img');
+              recommend.src = './media/recommend.png'
+              recommend.setAttribute('class','image2')
+              card.append(recommend)
+            }
+            movie.append(card,des)
+            document.getElementById('movie').append(movie)
+        });        
+    }
+</script>
